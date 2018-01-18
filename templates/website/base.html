@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+{% load static %}
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    
+    <div id=""></div>
+    <link  href="{% static 'website/css/bootstrap.min.css' %}" rel="stylesheet">
+    <link href="{% static 'website/css/heroic-features.css' %}" rel="stylesheet">
+    <link href="{% static 'website/css/carousel.css' %}" rel="stylesheet">
+    <!-- Google fonts - Open Sans-->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:400,300,700,400italic">
+    <!-- Font Awesome CSS-->
+    <link rel="stylesheet" href="{% static 'website/css/font-awesome.min.css' %}">
+    <!-- owl carousel-->
+    <link rel="stylesheet" href="{% static 'website/css/owl.carousel.css' %}">
+    <link rel="stylesheet" href="{% static 'website/css/owl.theme.css' %}">
+    <!-- theme stylesheet-->
+    <link rel="stylesheet" href="{% static 'website/css/style.default.css' %}" id="theme-stylesheet">
+    <!-- Custom stylesheet - for your changes-->
+    <link rel="stylesheet" href="{% static 'website/css/custom.css' %}">
+</head>
+<body>
+    <div class="all">
+        <div class="container-fluid">
+                {% block navbar %}
+                    {% include 'website/navbar.html' %}
+                {% endblock %}
+                {% block content %}
+                {% endblock %}
+        </div>
+    </div>
+</body>
+</html>
